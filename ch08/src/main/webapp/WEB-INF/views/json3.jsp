@@ -18,12 +18,12 @@ $(function(){
 		};
 		
 		$.ajax({
-			url: '/ch08/api/post1',
+			url: '/ch08/api/post2',
 			async: true,
 			type: 'post',
 			dataType: 'json',
-			contentType: 'application/x-www-form-urlencoded',
-			data: $.param(vo),
+			contentType: 'application/json',
+			data: JSON.stringify(vo),
 			success: function(response) {
 				// console.log(response);
 				if(response.result !== 'success') {
